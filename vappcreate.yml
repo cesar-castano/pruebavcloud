@@ -1,0 +1,5 @@
+- name: create vapp
+   vcd_vapp:
+        vapp_name: "test_vapp"
+        vdc: "test_vdc"
+        state: "present"
