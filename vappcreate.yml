@@ -1,9 +1,16 @@
 ---
-- hosts: all
+- hosts: localhost
   gather_facts: false
   connection: local
   #vars:
   #  #  ansible_python_interpreter: "{{ansible_playbook_python}}"
+  environment:
+   env_user: PruebaAnsible
+   env_password: prueba123
+   env_host: https://cloud-iaas-v.une.com.co/org/Autoconsumo_Implementacion_B2B/            ## VCD Instance URL
+   env_org: Autoconsumo Implementacion B2B             ## VCD ORG to login
+ #env_api_version: PYVCLOUD_API_VERSION
+ # env_verify_ssl_certs: False
   tasks:
   - name: Crearvapp
     vcd_vapp:
